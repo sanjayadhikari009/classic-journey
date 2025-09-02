@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    /* Travelstride Brand Colors */
+    --color-primary: #059669; /* Green-600 */
+    --color-primary-dark: #047857; /* Green-700 */
+    --color-primary-light: #10b981; /* Green-500 */
+    --color-primary-lighter: #d1fae5; /* Green-100 */
+
+    /* Secondary Colors */
+    --color-secondary: #1e40af; /* Blue-700 */
+    --color-secondary-light: #3b82f6; /* Blue-500 */
+    --color-secondary-lighter: #dbeafe; /* Blue-100 */
+
+    /* Accent Colors */
+    --color-accent-yellow: #f59e0b; /* Amber-500 */
+    --color-accent-orange: #f97316; /* Orange-500 */
+    --color-accent-purple: #8b5cf6; /* Violet-500 */
+    --color-accent-red: #ef4444; /* Red-500 */
+
+    /* Neutral Colors */
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+
+    /* Status Colors */
+    --color-success: #10b981; /* Green-500 */
+    --color-warning: #f59e0b; /* Amber-500 */
+    --color-error: #ef4444; /* Red-500 */
+    --color-info: #3b82f6; /* Blue-500 */
+
+    /* Background Colors */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f9fafb;
+    --color-bg-dark: #111827;
+    --color-bg-overlay: rgba(0, 0, 0, 0.5);
+
+    /* Text Colors */
+    --color-text-primary: #111827;
+    --color-text-secondary: #4b5563;
+    --color-text-muted: #6b7280;
+    --color-text-light: #ffffff;
+    --color-text-inverse: #ffffff;
+}
+
+/* Custom CSS Variables for easy access */
+:root {
+    /* Brand Colors */
+    --travelstride-green: #059669;
+    --travelstride-green-dark: #047857;
+    --travelstride-green-light: #10b981;
+    --travelstride-green-lighter: #d1fae5;
+
+    /* Blue Colors */
+    --travelstride-blue: #1e40af;
+    --travelstride-blue-light: #3b82f6;
+    --travelstride-blue-lighter: #dbeafe;
+
+    /* Accent Colors */
+    --travelstride-yellow: #f59e0b;
+    --travelstride-orange: #f97316;
+    --travelstride-purple: #8b5cf6;
+    --travelstride-red: #ef4444;
+
+    /* Gray Scale */
+    --travelstride-gray-50: #f9fafb;
+    --travelstride-gray-100: #f3f4f6;
+    --travelstride-gray-200: #e5e7eb;
+    --travelstride-gray-300: #d1d5db;
+    --travelstride-gray-400: #9ca3af;
+    --travelstride-gray-500: #6b7280;
+    --travelstride-gray-600: #4b5563;
+    --travelstride-gray-700: #374151;
+    --travelstride-gray-800: #1f2937;
+    --travelstride-gray-900: #111827;
+}
+
+/* Custom Component Styles */
+.btn-primary {
+    @apply bg-[#177A68] px-8 py-4 text-white text-center rounded-md hover:bg-[#054f42];
+}
+
+.btn-secondary {
+    @apply inline-flex whitespace-nowrap text-sm bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200;
+}
+
+.btn-outline {
+    @apply border border-green-600 text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-green-600 hover:text-white transition-colors duration-200;
+}
+.btn-outline-primary {
+    @apply text-sm border border-green-600 text-green-600 px-6 py-3 rounded-full font-medium hover:bg-green-600 hover:text-white transition-colors duration-200;
+}
+.btn-outline-white {
+    @apply inline-flex w-auto whitespace-nowrap border text-sm border-white text-white px-6 py-3 rounded-full font-medium  hover:bg-green-600  transition-colors duration-200;
+}
+.slider-custom {
+    @apply !w-[270px] !h-[400px];
+}
+
+.title-one {
+    @apply text-2xl font-bold;
+}
+.radial-fade {
+    background: radial-gradient(
+        64.1% 68.12% at 50% 19.48%,
+        #ffffff 0%,
+        hsla(0, 0%, 100%, 0.43) 50.32%,
+        hsla(0, 0%, 100%, 0) 100%
+    );
+}
+.card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200;
+}
+
+.nav-link {
+    @apply text-gray-800 hover:text-green-600 font-medium transition-colors duration-200;
+}
+
+.nav-link-active {
+    @apply text-green-600 font-semibold;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    @apply bg-white rounded-full shadow-lg px-4 py-2 border border-gray-200 focus:border-green-600 focus:ring-2 focus:ring-green-100;
+}
+
+/* Rating Stars */
+.rating-stars {
+    @apply text-yellow-400;
+}
+
+/* Price Display */
+.price-display {
+    @apply text-green-600 font-semibold;
+}
+
+/* Status Badges */
+.badge-featured {
+    @apply bg-green-600 text-white px-2 py-1 rounded text-xs font-medium;
+}
+
+.badge-popular {
+    @apply bg-orange-500 text-white px-2 py-1 rounded text-xs font-medium;
+}
+
+.badge-new {
+    @apply bg-blue-700 text-white px-2 py-1 rounded text-xs font-medium;
+}
+
+/* Solid Backgrounds */
+.gradient-hero {
+    background: #059669;
+}
+
+.gradient-card-1 {
+    background: #3b82f6;
+}
+
+.gradient-card-2 {
+    background: #10b981;
+}
+
+.gradient-card-3 {
+    background: #f59e0b;
+}
+
+.gradient-card-4 {
+    background: #f97316;
+}
+
+/* Navigation Blur Effect */
+.nav-blur {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design Helpers */
+@media (max-width: 768px) {
+    .mobile-nav {
+        @apply bg-white shadow-lg;
+    }
+
+    .mobile-menu {
+        @apply bg-white border-t border-gray-200;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .print-friendly {
+        @apply text-black bg-white;
+    }
+}

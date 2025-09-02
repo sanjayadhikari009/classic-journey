@@ -4,14 +4,52 @@
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
+@font-face {
+    font-family: "Mencken";
+    src: url("/public/fonts/fonnts.com-Mencken-Std-Text-.otf")
+        format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: "Mencken";
+    src: url("/public/fonts/fonnts.com-Mencken-Std-Extra-Bold.otf")
+        format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Terminatest";
+    src: url("/public/fonts/TerminaTest-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Terminatest";
+    src: url("/public/fonts/TerminaTest-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Terminatest";
+    src: url("/public/fonts/TerminaTest-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 @theme {
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-
+    --font-mencken: "Mencken";
+    --font-terminatest: "Terminatest";
     /* Travelstride Brand Colors */
-    --color-primary: #059669; /* Green-600 */
+    --color-primary: #0074e0; /* Green-600 */
     --color-primary-dark: #047857; /* Green-700 */
     --color-primary-light: #10b981; /* Green-500 */
     --color-primary-lighter: #d1fae5; /* Green-100 */
@@ -91,26 +129,32 @@
     --travelstride-gray-900: #111827;
 }
 
+.section-wrapper {
+    @apply py-[70px];
+}
+.container {
+    @apply max-w-7xl  mx-auto;
+}
 /* Custom Component Styles */
 .btn-primary {
-    @apply bg-[#177A68] px-8 py-4 text-white text-center rounded-md hover:bg-[#054f42];
+    @apply bg-[#0074e0] border-[#0074e0] px-4 py-2 text-white text-center font-bold text-sm hover:bg-[#0b4984] uppercase;
 }
 
 .btn-secondary {
-    @apply inline-flex whitespace-nowrap text-sm bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200;
+    @apply inline-flex whitespace-nowrap text-sm bg-white text-black px-6 py-3  font-medium hover:bg-gray-100 transition-colors duration-200;
 }
 
 .btn-outline {
-    @apply border border-green-600 text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-green-600 hover:text-white transition-colors duration-200;
+    @apply border border-[#0074e0] text-[#0074e0]  px-6 py-3 uppercase font-medium hover:bg-[#0074e0] hover:text-white transition-colors duration-200;
 }
 .btn-outline-primary {
-    @apply text-sm border border-green-600 text-green-600 px-6 py-3 rounded-full font-medium hover:bg-green-600 hover:text-white transition-colors duration-200;
+    @apply text-sm border border-green-600 text-green-600 px-6 py-3  font-medium hover:bg-green-600 hover:text-white transition-colors duration-200;
 }
 .btn-outline-white {
-    @apply inline-flex w-auto whitespace-nowrap border text-sm border-white text-white px-6 py-3 rounded-full font-medium  hover:bg-green-600  transition-colors duration-200;
+    @apply inline-flex uppercase  whitespace-nowrap border text-sm border-white text-white px-6 py-2  font-medium  hover:bg-white hover:text-black  transition-colors duration-200;
 }
 .slider-custom {
-    @apply !w-[270px] !h-[400px];
+    @apply max-w-[330px] h-[480px];
 }
 
 .title-one {
@@ -278,4 +322,11 @@
     .print-friendly {
         @apply text-black bg-white;
     }
+}
+
+.section-heading {
+    @apply text-5xl  text-center pb-[45px] font-mencken leading-12;
+}
+.section-subheading {
+    @apply text-center text-[12px] font-medium uppercase mb-2;
 }

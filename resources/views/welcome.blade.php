@@ -22,6 +22,7 @@
         :root,
         :host {
             --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
             --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
             --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
             --color-red-50: oklch(.971 .013 17.38);
@@ -379,7 +380,7 @@
             --aspect-video: 16/9;
             --default-transition-duration: .15s;
             --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-            --default-font-family: var(--font-sans);
+            --default-font-family: var(--font-termina);
             --default-font-feature-settings: var(--font-sans--font-feature-settings);
             --default-font-variation-settings: var(--font-sans--font-variation-settings);
             --default-mono-font-family: var(--font-mono);

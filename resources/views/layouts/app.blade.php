@@ -134,15 +134,14 @@
         <!-- Navigation (transparent, overlays hero) -->
         <div id="main-content">
             <header class="fixed w-full z-50 top-0 ">
-                <nav class="mx-auto  bg-transparent  border-b border-b-white">
+                <nav class="mx-auto  relative  bg-transparent  border-b border-b-white shadow-xl z-50">
 
 
-                    <div class="container flex  items-center">
+                    <div class="container flex  items-center ">
                         <!-- Logo -->
-                        <div class="relative flex justify-center space-x-2   ">
+                        <div class=" flex justify-center space-x-2   ">
                             <a href="/" class=" flex items-center w-[300px] pr-8 ">
-                                <!-- <img src="https://client.travelstride.com/app/_next/static/media/travel_stride_logo.a7a9b6f8.svg"
-                                    alt="Travelstride Logo" class="h-10 w-full"> -->
+
                                 <svg id="header-logo" class="brightness-0 invert" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 580.04266 104.97457">
                                     <g>
@@ -427,7 +426,7 @@
                         </div>
 
                         <!-- Right side -->
-                        <div id="nav-container" class=" flex-1 border-l border-l-white">
+                        <div id="nav-container" class="hidden md:flex flex-col md:flex-1 border-l border-l-white">
                             <div id="nav-border"
                                 class="relative before:absolute  before:bottom-0 before:border-b before:border-b-white before:w-[calc(100vw-(100vw-1320px)/2-300px)]">
                                 <div class=" flex items-center justify-between pl-8 py-2  ">
@@ -459,113 +458,442 @@
 
                             <div class="py-4 pl-8 flex items-center justify-between">
                                 <ul class="flex items-center gap-6">
-                                    <li><a href="/" class="nav-text text-white uppercase text-xs">By Destination</a>
-                                    </li>
-                                    <li><a href="/" class="nav-text text-white uppercase text-xs">By Intrest</a></li>
-                                    <li><a href="/" class="nav-text text-white uppercase text-xs">Trip Finder</a></li>
-                                    <li><a href="/" class="nav-text text-white uppercase text-xs">Cj difference</a></li>
-                                    <li><a href="/" class="nav-text text-white uppercase text-xs">Advice and
-                                            inspiration</a></li>
+                                    <li><button id="navBtnOne"
+                                            class="nav-text font-bold text-white uppercase text-xs">By
+                                            Destination <i class="fa-solid fa-chevron-down"></i></button></li>
+
+                                    <li><button id="navBtnTwo"
+                                            class="nav-text font-bold text-white uppercase text-xs">By
+                                            Intrest <i class="fa-solid fa-chevron-down"></i></button></li>
+                                    <li><a href="/" class="nav-text font-bold text-white uppercase text-xs">Trip
+                                            Finder</a></li>
+                                    <li><button id="navBtnThree"
+                                            class="nav-text font-bold text-white uppercase text-xs">Cj
+                                            difference <i class="fa-solid fa-chevron-down"></i></button></li>
+                                    <li><button id="navBtnFour"
+                                            class="nav-text font-bold text-white uppercase text-xs">Advice
+                                            and
+                                            inspiration <i class="fa-solid fa-chevron-down"></i></button></li>
                                 </ul>
                                 <a id="sign-in-btn" href="{{ route('login') }}" class="btn-primary ">Find
                                     Tour</a>
 
                             </div>
-                            <!-- @auth
-                        <div class=" p-2">
-                            <button id="user-menu-button"
-                                class="flex items-center space-x-2 text-white hover:text-green-200 transition-colors">
-                                <div
-                                    class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center font-semibold">
-                                    {{ substr(Auth::user()->name, 0, 1) }}
-                                </div>
-                                <span class="hidden md:block">{{ Auth::user()->name }}</span>
-                                <i class="fas fa-chevron-down text-sm"></i>
-                            </button>
 
-                 
-                            <div id="user-dropdown"
-                                class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit"
-                                        class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                        <i class="fas fa-sign-out-alt mr-2"></i> Logout
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                        @else
-                        <a id="sign-in-btn" href="{{ route('login') }}" class="btn-outline-white p-2">Sign In</a>
-                        @endauth -->
                         </div>
                     </div>
 
 
                 </nav>
+                <div id="navOne" class="absolute left-0 top-full hidden   w-screen bg-white text-black">
+                    <div class="container grid grid-cols-12 gap-12">
+                        <!-- Left Column -->
+                        <div class="col-span-9 grid grid-cols-12 py-[70px] ">
+                            <div class="space-y-3 col-span-4">
+                                <ul class="space-y-8">
+                                    <li class="overflow-hidden">
+                                        <button data-tab="europe"
+                                            class="tab-btn text-primary  transition-transform transform-gpu duration-300 hover:text-primary text-xl font-medium flex items-center gap-2 w-full">
+                                            <span class="h-[2px] w-4 bg-primary"></span>
+                                            <span>Europe</span>
+                                        </button>
+                                    </li>
+                                    <li class="overflow-hidden">
+                                        <button data-tab="africa"
+                                            class="tab-btn text-xl -translate-x-6 hover:translate-x-0 transition-transform transform-gpu duration-300 hover:text-primary font-medium flex items-center gap-2 w-full">
+                                            <span class="h-[2px] w-4 bg-primary"></span>
+                                            <span>Africa</span>
+                                        </button>
+                                    </li>
+                                    <li class="overflow-hidden">
+                                        <button data-tab="latin"
+                                            class="tab-btn text-xl -translate-x-6 hover:translate-x-0 transition-transform transform-gpu duration-300 font-medium flex items-center gap-2 w-full">
+                                            <span class="h-[2px] w-4 bg-primary"></span>
+                                            <span>Latin America</span>
+                                        </button>
+                                    </li>
+                                    <li class="overflow-hidden">
+                                        <button data-tab="north"
+                                            class="tab-btn text-xl -translate-x-6 hover:translate-x-0 transition-transform transform-gpu duration-300 font-medium flex items-center gap-2 w-full">
+                                            <span class="h-[2px] w-4 bg-primary"></span>
+                                            <span>North America</span>
+                                        </button>
+                                    </li>
+                                    <li class="overflow-hidden">
+                                        <button data-tab="asia"
+                                            class="tab-btn text-xl -translate-x-6 hover:translate-x-0 transition-transform transform-gpu duration-300 font-medium flex items-center gap-2 w-full">
+                                            <span class="h-[2px] w-4 bg-primary"></span>
+                                            <span>Asia &amp; India</span>
+                                        </button>
+                                    </li>
+                                    <li class="overflow-hidden">
+                                        <button data-tab="pacific"
+                                            class="tab-btn text-xl -translate-x-6 hover:translate-x-0 transition-transform transform-gpu duration-300 font-medium flex items-center gap-2 w-full">
+                                            <span class="h-[2px] w-4 bg-primary"></span>
+                                            <span>South Pacific</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Middle Column -->
+                            <div class="col-span-8">
+                                <div id="tab-europe" class="tab-content">
+                                    <div class="flex justify-between items-center pb-4 mb-4 border-b">
+                                        <h3 class="font-sans">Top Destinations in Europe</h3>
+                                        <a href="#"
+                                            class="text-primary font-sans text-sm font-bold flex items-center">All
+                                            Europe <span class="ml-1">➤</span></a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-8 text-sm">
+                                        <a href="#" class="hover:text-primary">Italy</a>
+                                        <a href="#" class="hover:text-primary">France</a>
+                                        <a href="#" class="hover:text-primary">Iceland</a>
+                                        <a href="#" class="hover:text-primary">Spain</a>
+                                        <a href="#" class="hover:text-primary">Greece</a>
+                                        <a href="#" class="hover:text-primary">United Kingdom &amp; Ireland</a>
+                                        <a href="#" class="hover:text-primary">Portugal</a>
+                                        <a href="#" class="hover:text-primary">Central Europe</a>
+                                        <a href="#" class="hover:text-primary">Croatia</a>
+                                        <a href="#" class="hover:text-primary">Norway</a>
+                                    </div>
+                                </div>
+
+                                <!-- Africa -->
+                                <div id="tab-africa" class="tab-content hidden">
+                                    <div class="flex justify-between items-center pb-4 mb-4 border-b">
+                                        <h3 class="font-sans">Top Destinations in Africa</h3>
+                                        <a href="#"
+                                            class="text-primary font-sans text-sm font-bold flex items-center">All
+                                            Africa <span class="ml-1">➤</span></a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-8 text-sm">
+                                        <a href="#" class="hover:text-primary">Kenya</a>
+                                        <a href="#" class="hover:text-primary">Tanzania</a>
+                                        <a href="#" class="hover:text-primary">Morocco</a>
+                                        <a href="#" class="hover:text-primary">South Africa</a>
+                                    </div>
+                                </div>
+
+                                <!-- Latin America -->
+                                <div id="tab-latin" class="tab-content hidden">
+                                    <div class="flex justify-between items-center pb-4 mb-4 border-b">
+                                        <h3 class="font-sans">Top Destinations in Latin America</h3>
+                                        <a href="#"
+                                            class="text-primary font-sans text-sm font-bold flex items-center">All Latin
+                                            America <span class="ml-1">➤</span></a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-8 text-sm">
+                                        <a href="#" class="hover:text-primary">Galápagos</a>
+                                        <a href="#" class="hover:text-primary">Belize</a>
+                                        <a href="#" class="hover:text-primary">Chile</a>
+                                        <a href="#" class="hover:text-primary">Costa Rica</a> <a href="#"
+                                            class="hover:text-primary">Costa Rica</a>
+                                        <a href="#" class="hover:text-primary">Peru</a>
+                                        <a href="#" class="hover:text-primary">Cuba</a>
+
+                                    </div>
+                                </div>
+
+                                <!-- North America -->
+                                <div id="tab-north" class="tab-content hidden">
+                                    <div class="flex justify-between items-center pb-4 mb-4 border-b">
+                                        <h3 class="font-sans">Top Destinations in North America</h3>
+                                        <a href="#"
+                                            class="text-primary font-sans text-sm font-bold flex items-center">All North
+                                            America <span class="ml-1">➤</span></a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-8 text-sm">
+                                        <a href="#" class="hover:text-primary">Alaska</a>
+                                        <a href="#" class="hover:text-primary">Quebec & Charlevoix</a>
+                                        <a href="#" class="hover:text-primary">Bryce, Grand Canyon & Zion</a>
+                                        <a href="#" class="hover:text-primary">Nova Scotia</a>
+                                        <a href="#" class="hover:text-primary">Montana Glacier Park</a>
+                                        <a href="#" class="hover:text-primary">Canada</a>
+                                        <a href="#" class="hover:text-primary">Yellowstone & Tetons</a>
+                                        <a href="#" class="hover:text-primary">USA</a>
+
+
+                                    </div>
+                                </div>
+
+                                <!-- Asia -->
+                                <div id="tab-asia" class="tab-content hidden">
+                                    <div class="flex justify-between items-center pb-4 mb-4 border-b">
+                                        <h3 class="font-sans">Top Destinations in Asia &amp; India</h3>
+                                        <a href="#"
+                                            class="text-primary font-sans text-sm font-bold flex items-center">All Asia
+                                            <span class="ml-1">➤</span></a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-8 text-sm">
+                                        <a href="#" class="hover:text-primary">Vietnam, Laos & Cambodia</a>
+                                        <a href="#" class="hover:text-primary">India</a>
+                                        <a href="#" class="hover:text-primary">Japan</a>
+                                        <a href="#" class="hover:text-primary">Bhutan</a>
+                                    </div>
+                                </div>
+
+                                <!-- South Pacific -->
+                                <div id="tab-pacific" class="tab-content hidden">
+                                    <div class="flex justify-between items-center pb-4 mb-4 border-b">
+                                        <h3 class="font-sans">Top Destinations in South Pacific</h3>
+                                        <a href="#"
+                                            class="text-primary font-sans text-sm font-bold flex items-center">All
+                                            Pacific <span class="ml-1">➤</span></a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-8 text-sm">
+                                        <a href="#" class="hover:text-primary">New Zealand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div
+                            class=" text-white  py-[70px] p-4 col-span-3 bg-black relative before:absolute before:top-0 before:left-0 before:-right-full before:bottom-0 before:bg-black">
+                            <div class="relative">
+                                <img src="https://www.classicjourneys.com/wp-content/uploads/2018/05/destination-drop-down-224x146.jpg"
+                                    alt="Trip Finder" class="mb-3 " />
+                                <p class="text-sm mb-2 ">
+                                    Need help choosing? Use the Trip Finder to search by date,
+                                    destination, tour type, traveler type, activities and interests!
+                                </p>
+                                See all destinations <span class="ml-1">➤</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="navTwo" class="absolute left-0 top-full hidden   w-screen bg-white text-black">
+                    <div class="container grid grid-cols-12 gap-12">
+                        <!-- Left Column -->
+                        <div
+                            class="col-span-3 py-[70px] bg-gray-100 relative before:absolute before:top-0 before:right-0 before:-left-full before:bottom-0 before:bg-gray-100">
+                            <div class="relative space-y-6 font-sans pr-[110px]">
+                                <h2 class="text-slate-600 uppercase text-xs font-medium">by traveler</h2>
+                                <div>
+                                    <a href="/" class=" capitalize hover:text-primary">Couples & Friends</a>
+                                    <p class="text-xs">You’re a traveler, not a tourist. See it with others who feel
+                                        the
+                                        same way.</p>
+                                </div>
+                                <div>
+                                    <a href="/" class=" capitalize hover:text-primary">Family</a>
+                                    <p class="text-xs">Bring the entire family and create new memories for everyone,
+                                        of
+                                        every age.</p>
+                                </div>
+                                <div>
+                                    <a href="/" class=" capitalize hover:text-primary">Solo</a>
+                                    <p class="text-xs">Travel solo, but never alone with travelers who look at the
+                                        world
+                                        like you do.</p>
+                                </div>
+                                <div>
+                                    <a href="/" class=" capitalize hover:text-primary">Private</a>
+                                    <p class="text-xs">Travel with your people on your dates. Private and custom
+                                        trips
+                                        designed for you.</p>
+                                </div>
+                                <div>
+                                    <a href="/" class=" capitalize hover:text-primary">Group & corporate</a>
+                                    <p class="text-xs">A rich, unique travel experience is the ideal way to
+                                        strengthen
+                                        ties to your organization.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-6 grid lg:grid-cols-2 py-[70px] gap-4 font-sans">
+                            <div class="col-span-2">
+                                <h2 class="text-slate-600 uppercase text-xs font-medium">by traveler</h2>
+                            </div>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Most Popular Tools</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Multi-Destination Tours</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Tours with Iconic Walks</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Family Tours</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Wildlife Tours</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Island Tours</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Foodie Tours</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top Solar Eclipse Viewing Tours</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Tours for Wine Lovers</a>
+                            <a href="/" class=" capitalize hover:text-primary">Private & Custom</a>
+                            <a href="/" class=" capitalize hover:text-primary">Top 10 Tours for History Buffs</a>
+
+
+                        </div>
+
+                        <!-- Right Column -->
+                        <div
+                            class=" text-white font-sans  py-[70px] p-4 col-span-3 bg-black relative before:absolute before:top-0 before:left-0 before:-right-full before:bottom-0 before:bg-black">
+                            <div class="relative">
+                                <img src="https://www.classicjourneys.com/wp-content/uploads/2018/05/destination-drop-down-224x146.jpg"
+                                    alt="Trip Finder" class="mb-3 " />
+                                <p class=" mb-2 font-medium text-xl">
+                                    Private Tours
+                                </p>
+                                <p class="text-sm mb-2 ">
+                                    Your People. Your dates.
+                                </p>
+                                See all destinations <span class="ml-1">➤</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="navThree" class="absolute left-0 top-full hidden   w-screen bg-white text-black">
+                    <div class="container grid grid-cols-12 gap-12">
+                        <!-- Left Column -->
+
+                        <div class="col-span-8 grid grid-cols-3 gap-8  py-[70px] font-sans">
+                            <a href="/" class="font-medium hover:text-primary">Italy</a>
+                            <a href="/" class="font-medium hover:text-primary">France</a>
+                            <a href="/" class="font-medium hover:text-primary">Iceland</a>
+                            <a href="/" class="font-medium hover:text-primary">Spain</a>
+                            <a href="/" class="font-medium hover:text-primary">Greece</a>
+                            <a href="/" class="font-medium hover:text-primary">United Kingdom &amp; Ireland</a>
+                            <a href="/" class="font-medium hover:text-primary">Portugal</a>
+                            <a href="/" class="font-medium hover:text-primary">Central Europe</a>
+                            <a href="/" class="font-medium hover:text-primary">Croatia</a>
+                            <a href="/" class="font-medium hover:text-primary">Norway</a>
+                        </div>
+
+
+
+                        <!-- Right Column -->
+
+                    </div>
+                </div>
+                <div id="navFour" class="absolute left-0 top-full hidden   w-screen bg-white text-black">
+                    <div class="container grid grid-cols-12 ">
+                        <!-- Left Column -->
+
+                        <div
+                            class=" py-[70px] p-4 col-span-3 bg-gray-100 relative before:absolute before:top-0 before:-left-full before:right-0 before:bottom-0 before:bg-gray-100">
+                            <div class="relative">
+                                <img src="https://www.classicjourneys.com/wp-content/uploads/2018/05/destination-drop-down-224x146.jpg"
+                                    alt="Trip Finder" class="mb-3 " />
+                                <p class=" mb-2 font-medium text-xl">
+                                    Travel Blog
+                                </p>
+                                See all destinations <span class="ml-1">➤</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-span-4 px-12 flex flex-col gap-6 py-[70px] font-sans bg-gray-100">
+                            <h2 class="text-slate-600 uppercase text-xs font-medium">Topics</h2>
+
+                            <a href="/" class="font-medium hover:text-primary">Travel Tips</a>
+                            <a href="/" class="font-medium hover:text-primary">Travel Stories</a>
+                            <a href="/" class="font-medium hover:text-primary">Catalog Gallery</a>
+
+                        </div>
+                        <div class="col-span-4 px-12 flex flex-col gap-6 py-[70px] font-sans">
+                            <h2 class="text-slate-600 uppercase text-xs font-medium">Travel Advice</h2>
+
+                            <a href="/" class="font-medium hover:text-primary">Insurance</a>
+                            <a href="/" class="font-medium hover:text-primary">Health & Safety</a>
+                            <a href="/" class="font-medium hover:text-primary">FAQs</a>
+
+                        </div>
+
+
+                        <!-- Right Column -->
+
+                    </div>
+                </div>
             </header>
             <main>
                 @yield('content')
             </main>
+            <section class="py-[70px] bg-primary">
+                <div class="container">
+                    <h4 class=" section-subheading text-white">
+                        for the latest news & special offer
+                    </h4>
+                    <h2 class=" section-heading text-white">
+                        Sign Up for Our Newsletter
+                    </h2>
+                    <form class="flex  flex-col justify-center items-center gap-16">
+                        <div class="flex flex-wrap items-center lg:justify-center gap-6">
+                            <input type="email" placeholder="Email Address"
+                                class="p-2 border-b border-b-white text-white focus:outline-none" />
+                            <input type="text" placeholder="First Name"
+                                class="p-2 border-b border-b-white text-white focus:outline-none" />
+                            <input type="text" placeholder="Last Name"
+                                class="p-2 border-b border-b-white text-white focus:outline-none" />
+                            <div class="flex items-center mb-4">
+                                <input id="default-checkbox" type="checkbox" value=""
+                                    class="w-5 h-5 checked:text-primary text-primary appearance-none  checked:bg-white border-2 border-white ">
+                                <label for="default-checkbox" class="ms-2 text-sm font-medium text-white">Default
+                                    checkbox</label>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn-outline-white">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
             <footer class=" bg-black">
                 <div class="py-[70px]">
                     <div class="container">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="grid lg:grid-cols-2 gap-6">
+                            <div class=" grid grid-cols-2 lg:grid-cols-3 gap-6">
 
                                 <div class="Footer_links___b_Qj">
-                                    <p class=" mb-4 capitalize text-slate-400">
-                                        travelstride
+                                    <p class=" mb-4 uppercase text-slate-400">
+                                        Explore more
                                     </p>
                                     <div>
                                         <ul class="flex flex-col gap-6">
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
+                                            <li><a href="/" class="text-white font-sans">Blog</a></li>
+                                            <li><a href="/" class="text-white font-sans">Gallery</a></li>
+                                            <li><a href="/" class="text-white font-sans">Media Coverage</a></li>
+                                            <li><a href="/" class="text-white font-sans">Gift of Travel</a></li>
+                                            <li><a href="/" class="text-white font-sans">FAQs</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="Footer_links___b_Qj">
-                                    <p class=" mb-4 capitalize text-slate-400">
-                                        travelstride
+                                    <p class=" mb-4 uppercase text-slate-400">
+                                        Our Story
                                     </p>
                                     <div>
                                         <ul class="flex flex-col gap-6">
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
+                                            <li><a href="/" class="text-white font-sans">About Us</a></li>
+                                            <li><a href="/" class="text-white font-sans">Sustainability</a></li>
+                                            <li><a href="/" class="text-white font-sans">Awards</a></li>
+                                            <li><a href="/" class="text-white font-sans">Terms & COnditions</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="Footer_links___b_Qj">
-                                    <p class=" mb-4 capitalize text-slate-400">
-                                        travelstride
+                                    <p class=" mb-4 uppercase text-slate-400">
+                                        Connect
                                     </p>
                                     <div>
                                         <ul class="flex flex-col gap-6">
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
-                                            <li><a href="/" class="text-white">Blog</a></li>
+                                            <li><a href="/" class="text-white font-sans">Travel Advisors</a></li>
+                                            <li><a href="/" class="text-white font-sans">Careers</a></li>
+                                            <li><a href="/" class="text-white font-sans">Request a Catalog</a></li>
+                                            <li><a href="/" class="text-white font-sans">Contact Us</a></li>
                                         </ul>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="flex justify-end">
+                            <div class="flex lg:justify-end">
                                 <div class="space-y-8">
                                     <div>
-                                        <p class=" mb-4 capitalize text-white">
+                                        <p class=" mb-4 capitalize text-white font-sans">
                                             Chat with our travel experts
                                         </p>
-                                        <a href="/" class="text-3xl text-white">800-200-3887</a>
-                                        <p class="text-[10px] text-slate-400">Mon-Fri 5:00AM - 5:00PM PST</p>
+                                        <a href="/" class="text-3xl text-white font-sans">800-200-3887</a>
+                                        <p class="text-[10px] text-slate-400 font-sans">Mon-Fri 5:00AM - 5:00PM PST</p>
 
                                     </div>
                                     <div>
-                                        <p class=" mb-4 capitalize text-white">
+                                        <p class=" mb-4 capitalize text-white font-sans">
                                             Share Your Travels
                                         </p>
                                         <div class="flex items-center gap-4">
@@ -576,18 +904,15 @@
                                             </div>
                                             <div
                                                 class="h-12 w-12 flex items-center justify-center rounded-full bg-white">
-                                                <a href="/" class="text-xl"><i
-                                                        class="fa-brands fa-square-facebook"></i></a>
+                                                <a href="/" class="text-xl"><i class="fa-brands fa-youtube"></i></a>
                                             </div>
                                             <div
                                                 class="h-12 w-12 flex items-center justify-center rounded-full bg-white">
-                                                <a href="/" class="text-xl"><i
-                                                        class="fa-brands fa-square-facebook"></i></a>
+                                                <a href="/" class="text-xl"><i class="fa-brands fa-instagram"></i></a>
                                             </div>
                                             <div
                                                 class="h-12 w-12 flex items-center justify-center rounded-full bg-white">
-                                                <a href="/" class="text-xl"><i
-                                                        class="fa-brands fa-square-facebook"></i></a>
+                                                <a href="/" class="text-xl"><i class="fa-brands fa-twitter"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -602,8 +927,8 @@
 
                 </div>
                 <div class="container">
-                    <div class="w-full flex justify-between">
-                        <div class="text-white  text-[10px] flex items-center gap-6">
+                    <div class="w-full flex flex-wrap gap-4 justify-between">
+                        <div class="text-white  text-[10px] flex flex-wrap  items-center gap-6">
                             <p>
                                 © 2025 Classic Journeys llc. All rights reserved. CST-2145049-20
                             </p>
@@ -644,32 +969,40 @@
     });
     </script>
     <script>
-    let lastScrollTop = 0;
-    const header = document.querySelector("header");
-    const navContainer = document.getElementById("nav-container");
-    const sidebtn = document.getElementById("user-side-button");
-    const textcustom = document.querySelectorAll(".nav-text");
-    const navBorder = document.getElementById("nav-border");
-    const headerLogo = document.getElementById("header-logo");
+    document.addEventListener('DOMContentLoaded', function() {
+        // Grab elements with null checks
+        const navBtnOne = document.getElementById("navBtnOne");
+        const navBtnTwo = document.getElementById("navBtnTwo");
+        const navBtnThree = document.getElementById("navBtnThree");
+        const navBtnFour = document.getElementById("navBtnFour");
 
-    const lgnusesr = document.getElementById("user-menu-button");
+        const navOne = document.getElementById("navOne");
+        const navTwo = document.getElementById("navTwo");
+        const navThree = document.getElementById("navThree");
+        const navFour = document.getElementById("navFour");
 
-    window.addEventListener("scroll", function() {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const header = document.querySelector("header");
+        const headerLogo = document.getElementById("header-logo");
+        const textcustom = document.querySelectorAll(".nav-text");
+        const navContainer = document.getElementById("nav-container");
+        const navBorder = document.getElementById("nav-border");
+        const sidebtn = document.getElementById("user-side-button");
+        const lgnusesr = document.getElementById("user-menu-button");
 
-        if (scrollTop > lastScrollTop) {
-            header.classList.add("bg-white");
+        let lastScrollTop = 0;
+        let isDropdownOpen = false; // Track dropdown state
 
+        // Function to apply scroll-down styles
+        function applyScrollDownStyles() {
+            if (header) header.classList.add("bg-white");
             if (sidebtn) {
                 sidebtn.classList.remove("text-white");
                 sidebtn.classList.add("text-black");
             }
-
             if (lgnusesr) {
                 lgnusesr.classList.remove("text-white");
                 lgnusesr.classList.add("text-black");
             }
-
             if (navContainer) {
                 navContainer.classList.remove("border-l-white");
                 navContainer.classList.add("border-l-black");
@@ -678,23 +1011,22 @@
                 navBorder.classList.remove("before:border-b-white");
                 navBorder.classList.add("before:border-b-black");
             }
-            if (headerLogo) {
-                headerLogo.classList.remove("brightness-0", "invert");
+            if (headerLogo) headerLogo.classList.remove("brightness-0", "invert");
+            if (textcustom.length > 0) {
+                textcustom.forEach(el => {
+                    el.classList.remove("text-white");
+                    el.classList.add("text-black");
+                });
             }
-            textcustom.forEach(el => {
-                el.classList.remove("text-white");
-                el.classList.add("text-black");
-            });
+        }
 
-
-        } else if (scrollTop === 0) {
-            header.classList.remove("bg-white");
-
+        // Function to apply scroll-up/top styles
+        function applyScrollUpStyles() {
+            if (header) header.classList.remove("bg-white");
             if (sidebtn) {
                 sidebtn.classList.add("text-white");
                 sidebtn.classList.remove("text-black");
             }
-
             if (lgnusesr) {
                 lgnusesr.classList.add("text-white");
                 lgnusesr.classList.remove("text-black");
@@ -707,16 +1039,92 @@
                 navBorder.classList.remove("before:border-b-black");
                 navBorder.classList.add("before:border-b-white");
             }
-            if (headerLogo) {
-                headerLogo.classList.add("brightness-0", "invert");
+            if (headerLogo) headerLogo.classList.add("brightness-0", "invert");
+            if (textcustom.length > 0) {
+                textcustom.forEach(el => {
+                    el.classList.remove("text-black");
+                    el.classList.add("text-white");
+                });
             }
-            textcustom.forEach(el => {
-                el.classList.remove("text-black");
-                el.classList.add("text-white");
-            });
         }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        // Scroll event listener
+        window.addEventListener("scroll", function() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            if (!isDropdownOpen) { // Only apply scroll logic when no dropdown is open
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    applyScrollDownStyles();
+                } else if (scrollTop < lastScrollTop || scrollTop === 0) {
+                    // Scrolling up or at top
+                    if (scrollTop === 0) {
+                        applyScrollUpStyles();
+                    }
+                }
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        // Helper to close all dropdowns
+        function closeAll() {
+            if (navOne) navOne.classList.add("hidden");
+            if (navTwo) navTwo.classList.add("hidden");
+            if (navThree) navThree.classList.add("hidden");
+            if (navFour) navFour.classList.add("hidden");
+            isDropdownOpen = false; // Reset dropdown state
+            if (window.scrollY === 0) {
+                applyScrollUpStyles(); // Revert to transparent only at top
+            }
+        }
+
+        // Toggle dropdown functions
+        function toggleDropdown(dropdown, btn) {
+            if (dropdown && btn) {
+                closeAll();
+                dropdown.classList.toggle("hidden");
+                isDropdownOpen = !dropdown.classList.contains("hidden"); // Update dropdown state
+                if (isDropdownOpen) {
+                    applyScrollDownStyles(); // Apply styles when dropdown opens
+                }
+            }
+        }
+
+        if (navBtnOne) navBtnOne.addEventListener("click", () => toggleDropdown(navOne, navBtnOne));
+        if (navBtnTwo) navBtnTwo.addEventListener("click", () => toggleDropdown(navTwo, navBtnTwo));
+        if (navBtnThree) navBtnThree.addEventListener("click", () => toggleDropdown(navThree, navBtnThree));
+        if (navBtnFour) navBtnFour.addEventListener("click", () => toggleDropdown(navFour, navBtnFour));
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", (e) => {
+            const isOutside = !e.target.closest("ul") && !e.target.closest("#navOne") && !e.target
+                .closest("#navTwo") &&
+                !e.target.closest("#navThree") && !e.target.closest("#navFour");
+            if (isOutside) {
+                closeAll();
+            }
+        });
+    });
+    </script>
+    <script>
+    const tabBtns = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const tab = btn.dataset.tab;
+
+            // remove active
+            tabBtns.forEach(b => b.classList.remove("text-primary"));
+            tabBtns.forEach(b => b.classList.add("-translate-x-6", "hover:translate-x-0"));
+            tabContents.forEach(c => c.classList.add("hidden"));
+
+            // activate selected
+            btn.classList.add("text-primary");
+            btn.classList.remove("-translate-x-6", "hover:translate-x-0");
+            document.getElementById(`tab-${tab}`).classList.remove("hidden");
+        });
     });
     </script>
     <script>

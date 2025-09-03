@@ -27,7 +27,8 @@
 <section class="py-[70px]">
     <div class="container flex justify-center">
         <div class="w-2/3 flex flex-col items-center">
-            <h2 class="text-center text-[44px] font-mencken">We create the most culturally rich</br>
+            <h2 class="text-center text-2xl md:text-[34px] lg:text-[44px] font-mencken">We create the most culturally
+                rich</br>
                 & authentic walking tours in the world.</h2>
             <a href="/" class="btn-outline mt-4">Read how we do it</a>
         </div>
@@ -36,10 +37,10 @@
 
 <section class="py-8 bg-primary">
     <div class="container flex justify-center">
-        <div class="w-2/3 flex flex-col items-center gap-4 ">
-            <h3 class="font-bold uppercase text-4xl text-white">Travel + </br> Leisure</h3>
-            <h3 class="font-bold uppercase text-4xl text-white">World Best tour operator</h3>
-            <h3 class="font-bold uppercase text-xl text-white">Multi-Time No. 1 & Hall of Fame</h3>
+        <div class="w-2/3 flex flex-col items-center justify-center gap-4 ">
+            <h3 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl text-white">Travel + </br> Leisure</h3>
+            <h3 class="font-bold uppercase text-3xl lg:text-4xl text-white text-center">World Best tour operator</h3>
+            <h3 class="font-bold uppercase lg:text-xl text-white text-center">Multi-Time No. 1 & Hall of Fame</h3>
 
         </div>
     </div>
@@ -47,7 +48,7 @@
 
 <section class="bg-black  py-[70px]">
     <div class=" container">
-        <h4 class="section-subheading">
+        <h4 class="section-subheading text-white">
             Choose your travel style
         </h4>
         <h2 class="text-white section-heading">
@@ -169,7 +170,7 @@
             Two Ways to Go
         </h2>
         <div class="flex justify-center">
-            <div class="grid grid-cols-2 w-2/3 gap-6">
+            <div class="grid lg:grid-cols-2 lg:w-2/3 gap-6">
                 <div class="bg-white/80 backdrop-blur-sm p-12  shadow-xl h-[496px] flex items-center justify-center">
                     <div class="space-y-6">
                         <h3 class="text-2xl font-medium text-center font-sans">Scheduled Small Group Trips</h3>
@@ -203,7 +204,7 @@
     </div>
 </section>
 
-<section class="py-[70px] bg-cover bg-center bg-no-repeat h-[1600px] relative"
+<section class="py-[70px] bg-cover bg-center bg-no-repeat h-[800px] md:h-[1200px] lg:h-[1600px] relative"
     style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Fuel-Your-Soul-Photo-375x358.jpg')">
     <div class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-white to-transparent ">
     </div>
@@ -211,7 +212,9 @@
         <h2 class="section-heading">
             Fuel your soul. One step at a time.
         </h2>
-        <p class="text-center text-xl px-15">We believe that travel—and in particular connecting with other people and
+        <p class="text-center lg:text-xl md:px-8 lg:px-15">We believe that travel—and in particular connecting with
+            other people
+            and
             cultures
             when
             you travel—fuels your soul in a way that very few things do. So, through our relationships with
@@ -224,8 +227,8 @@
 
 <section class="py-[70px]">
     <div class="container">
-        <div class="pb-[45px] flex justify-between items-end">
-            <h2 class=" text-5xl  font-mencken leading-12">
+        <div class="pb-[45px] flex flex-wrap gap-2 justify-between items-end">
+            <h2 class="text-2xl md:text-3xl lg:text-5xl  font-mencken lg:leading-12">
                 Explore Classic Journeys Blog
             </h2>
 
@@ -233,7 +236,7 @@
                     class="fa-solid fa-caret-right"></i></a>
 
         </div>
-        <div class="grid grid-cols-2 gap-8">
+        <div class="grid lg:grid-cols-2 gap-8">
             <div class="flex flex-col">
                 <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
                     alt="blogs" class="h-full w-full object-cover flex-1" />
@@ -283,15 +286,15 @@
 </section>
 <section class="py-[70px]">
     <div class="container">
-        <div class="pb-[45px] flex justify-between items-end">
-            <h2 class=" text-5xl  font-mencken leading-12">
+        <div class="pb-[45px] flex flex-wrap gap-2 justify-between items-end">
+            <h2 class="text-2xl md:text-3xl lg:text-5xl  font-mencken lg:leading-12">
                 Share Your Travels
 
             </h2>
             <a href="/" class="text-center text-primary ffont-medium uppercase">View Our Instagram <i
                     class="fa-solid fa-caret-right"></i></a>
         </div>
-        <div class="grid grid-cols-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8">
             <div>
                 <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />

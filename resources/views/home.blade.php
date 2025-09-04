@@ -3,11 +3,12 @@
 @section('title', "Travelstride - The new way to explore the world's wonders")
 
 @section('content')
+<!-- poster="/videos/heroimage.jpg" -->
 <!-- Hero Section with single background video and overlay -->
 <section class="relative h-[100vh] flex items-center justify-center overflow-hidden">
-    <video autoplay loop muted playsinline poster="/videos/heroimage.jpg"
-        class="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-full object-cover z-0 transition-all duration-700">
-        <source src="/videos/hero.webm" type="video/webm">
+    <video autoplay loop muted playsinline class="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-full object-cover z-0 transition-all
+        duration-700">
+        <source src="/videos/vid-vid.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="absolute inset-0 bg-black/50 z-10"></div>

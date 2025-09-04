@@ -56,106 +56,92 @@
         </h2>
     </div>
 
-    <div class="swiper-container  overflow-hidden">
+    <div class="swiper-container relative  overflow-hidden">
         <div class="swiper-wrapper">
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="0"
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="0"
                 style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Most Popular Tours</h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="1"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="1"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Walks.png');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Tours with Iconic Walks
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="2"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="2"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Wildlife.png');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Wildlife Tours
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="3"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="3"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Foodie-Tours.jpg');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Foodie Tours
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="4"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="4"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Wine-Lovers.png');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Tours for Wine Lovers
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="5"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="5"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-History-Buffs.png');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Tours for History Buffs
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="6"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="6"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Multi-Destination.png');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Multidestination Tours
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="7"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="7"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Family.png');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Family Tours
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <div class="swiper-slide  slider-custom mr-[20px]  bg-cover bg-center bg-no-repeat "
-                data-swiper-slide-index="8"
-                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Most-Popular-Tours.jpg');">
+            <div class="swiper-slide  slider-custom   bg-cover bg-center bg-no-repeat " data-swiper-slide-index="8"
+                style="background-image:url('https://www.classicjourneys.com/wp-content/uploads/2024/06/Top-10-Island-Tours-1.jpg');">
                 <div class="flex flex-col items-center justify-end h-full p-[35px]">
                     <h3 class="text-white text-3xl font-mencken text-center leading-8">Top 10 Island Tours
                     </h3>
                     <a href="/" class="btn-outline-white mt-2">see top 10</a>
                 </div>
             </div>
-            <!-- <button
-                class="button-prev swiper-button top-1/2 -left-15 w-[44px] h-[44px] z-10 hidden md:flex items-center justify-center bg-transparent cursor-pointer  visible absolute"
-                title="Previous Slide" type="button" data-gtm-category="Home Page Engagement" data-gtm-trigger="click"
-                data-gtm-action="Position 01 engagement" data-gtm-label="Trip Type Carousel / Arrow &lt;"><svg
-                    viewBox="0 0 10 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.5 2.08008L1.5 20.8089L8.5 39.0801" stroke="#DADADA" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </button>
-            <button
-                class="button-next swiper-button top-1/2 -right-15 w-[44px] h-[44px] z-10 hidden md:flex items-center justify-center rotate-180 bg-transparent cursor-pointer  visible absolute"
-                title="Next Slide" type="button" data-gtm-category="Home Page Engagement" data-gtm-trigger="click"
-                data-gtm-action="Position 01 engagement" data-gtm-label="Trip Type Carousel / Arrow &gt;">
-                <svg viewBox="0 0 10 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.5 2.08008L1.5 20.8089L8.5 39.0801" stroke="#DADADA" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </button> -->
+        </div>
+        <button
+            class="button-prev rounded-full bg-white swiper-button top-1/2 left-10 w-[50px] h-[50px] z-20 hidden md:flex items-center justify-center  cursor-pointer  visible absolute"
+            title="Previous Slide" type="button" data-gtm-category="Home Page Engagement" data-gtm-trigger="click"
+            data-gtm-action="Position 01 engagement" data-gtm-label="Trip Type Carousel / Arrow &lt;">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button
+            class="button-next rounded-full  bg-white swiper-button top-1/2 right-10 w-[50px] h-[50px] z-20 hidden md:flex items-center justify-center rotate-180  cursor-pointer  visible absolute"
+            title="Next Slide" type="button" data-gtm-category="Home Page Engagement" data-gtm-trigger="click"
+            data-gtm-action="Position 01 engagement" data-gtm-label="Trip Type Carousel / Arrow &gt;">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
 </section>
 
@@ -296,35 +282,35 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8">
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/06/instagram_1-150x150.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/06/instagram_2-184x184.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/06/instagram_3-150x150.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/06/instagram_4-150x150.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/06/instagram_5-150x150.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/06/instagram_6-150x150.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/06/instagram_7-150x150.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
             <div>
-                <img src="https://www.classicjourneys.com/wp-content/uploads/2019/09/Iceland-Image-couple-260x146.jpg"
+                <img src="https://www.classicjourneys.com/wp-content/uploads/2021/07/dancing-home-300x298.jpg"
                     alt="blogs" class="h-[120px] w-full object-cover" />
             </div>
         </div>

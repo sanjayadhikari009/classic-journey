@@ -34,6 +34,15 @@
     .side-index {
         z-index: 100;
     }
+
+    .submenu {
+        display: none;
+    }
+
+    /* show when toggled */
+    .submenu.open {
+        display: block;
+    }
     </style>
 </head>
 
@@ -481,10 +490,243 @@
                             </div>
 
                         </div>
+                        <div class="flex md:hidden flex-1 justify-end">
+                            <button class="menu-toggle text-white" id="menuToggle">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
                     </div>
 
 
                 </nav>
+                <div id="responsive-nav"
+                    class="absolute hidden left-0 top-full w-screen bg-white text-black p-4 shadow-lg">
+                    <div role="navigation" aria-label="Mobile navigation">
+                        <ul class="space-y-2">
+                            <li class="group">
+                                <button
+                                    class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                    onclick="toggleSubmenu('main-menu')" aria-expanded="false"
+                                    aria-controls="main-menu">
+                                    <span>By Destination</span>
+                                    <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                        id="main-arrow"></i>
+                                </button>
+
+                                <ul id="main-menu" class="submenu ml-4 mt-1 space-y-1">
+                                    <li>
+                                        <button
+                                            class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                            onclick="toggleSubmenu('europe-menu')" aria-expanded="false"
+                                            aria-controls="europe-menu">
+                                            <span>Europe</span>
+                                            <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                                id="europe-arrow"></i>
+                                        </button>
+
+                                        <ul id="europe-menu" class="submenu ml-4 mt-1 space-y-1">
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Italy</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Iceland</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                            onclick="toggleSubmenu('africa-menu')" aria-expanded="false"
+                                            aria-controls="africa-menu">
+                                            <span>Africa</span>
+                                            <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                                id="africa-arrow"></i>
+                                        </button>
+
+                                        <ul id="africa-menu" class="submenu ml-4 mt-1 space-y-1">
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Italy</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Iceland</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                            onclick="toggleSubmenu('latin-menu')" aria-expanded="false"
+                                            aria-controls="latin-menu">
+                                            <span>Latin America</span>
+                                            <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                                id="latin-arrow"></i>
+                                        </button>
+
+                                        <ul id="latin-menu" class="submenu ml-4 mt-1 space-y-1">
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Italy</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Iceland</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                            onclick="toggleSubmenu('north-menu')" aria-expanded="false"
+                                            aria-controls="north-menu">
+                                            <span>North America</span>
+                                            <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                                id="north-arrow"></i>
+                                        </button>
+
+                                        <ul id="north-menu" class="submenu ml-4 mt-1 space-y-1">
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Italy</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Iceland</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                            onclick="toggleSubmenu('asia-menu')" aria-expanded="false"
+                                            aria-controls="asia-menu">
+                                            <span>Asia & India</span>
+                                            <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                                id="asia-arrow"></i>
+                                        </button>
+
+                                        <ul id="asia-menu" class="submenu ml-4 mt-1 space-y-1">
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Italy</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>Iceland</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                            onclick="toggleSubmenu('south-menu')" aria-expanded="false"
+                                            aria-controls="south-menu">
+                                            <span>south Pacific</span>
+                                            <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                                id="south-arrow"></i>
+                                        </button>
+
+                                        <ul id="south-menu" class="submenu ml-4 mt-1 space-y-1">
+                                            <li>
+                                                <a href="#"
+                                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                                    <span>New Zealand</span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="group">
+                                <button
+                                    class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                    onclick="toggleSubmenu('main-interest')" aria-expanded="false"
+                                    aria-controls="main-interest">
+                                    <span>By Intrest</span>
+                                    <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                        id="main-arrow"></i>
+                                </button>
+
+                                <ul id="main-interest" class="submenu ml-4 mt-1 space-y-1">
+                                    <li>
+                                        <a href="#"
+                                            class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                            <span>top 10 destinaiton</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                    <span>Trip Finder</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <button
+                                    class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                    onclick="toggleSubmenu('main-difference')" aria-expanded="false"
+                                    aria-controls="main-difference">
+                                    <span>Cj Difference</span>
+                                    <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                        id="main-arrow"></i>
+                                </button>
+
+                                <ul id="main-difference" class="submenu ml-4 mt-1 space-y-1">
+                                    <li>
+                                        <a href="#"
+                                            class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                            <span>top 10 destinaiton</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="group">
+                                <button
+                                    class="w-full uppercase text-xs flex justify-between items-center py-2 px-2 hover:bg-gray-50 rounded transition-colors"
+                                    onclick="toggleSubmenu('main-inspiration')" aria-expanded="false"
+                                    aria-controls="main-inspiration">
+                                    <span>advice & inspiration</span>
+                                    <i class="fa-solid fa-chevron-right transition-transform duration-200"
+                                        id="main-arrow"></i>
+                                </button>
+
+                                <ul id="main-inspiration" class="submenu ml-4 mt-1 space-y-1">
+                                    <li>
+                                        <a href="#"
+                                            class="block uppercase text-xs py-2 px-2 hover:bg-gray-50 rounded transition-colors">
+                                            <span>top 10 destinaiton</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div id="navOne" class="absolute left-0 top-full hidden   w-screen bg-white text-black">
                     <div class="container grid grid-cols-12 gap-12">
                         <!-- Left Column -->
@@ -950,6 +1192,8 @@
             slidesPerView: 'auto',
             spaceBetween: 20,
             loop: true,
+            centeredSlides: true, // ✅ center the active slide
+
             navigation: {
                 nextEl: '.button-next',
                 prevEl: '.button-prev',
@@ -1229,6 +1473,58 @@
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);
     })();
+    </script>
+
+
+    <script>
+    function toggleSubmenu(menuId) {
+        const submenu = document.getElementById(menuId);
+        if (!submenu) return;
+
+        const button = document.querySelector(`[aria-controls="${menuId}"]`);
+        if (!button) return;
+
+        const arrow = button.querySelector('.fa-chevron-right');
+        const isOpen = submenu.classList.contains('open');
+
+        // Find the container UL that holds this submenu and its siblings (one level up)
+        const container = submenu.parentElement && submenu.parentElement.parentElement;
+
+        if (container) {
+            // Close only sibling submenus at the SAME LEVEL (do not touch ancestors)
+            container.querySelectorAll('li > ul.submenu').forEach(ul => {
+                if (ul !== submenu) ul.classList.remove('open');
+            });
+
+            // Reset arrows & aria on sibling buttons only
+            container.querySelectorAll('li > button[aria-expanded]').forEach(btn => {
+                if (btn !== button) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    const i = btn.querySelector('.fa-chevron-right');
+                    if (i) i.style.transform = 'rotate(0deg)';
+                }
+            });
+        }
+
+        // Toggle current submenu
+        if (isOpen) {
+            submenu.classList.remove('open');
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
+            button.setAttribute('aria-expanded', 'false');
+        } else {
+            submenu.classList.add('open');
+            if (arrow) arrow.style.transform = 'rotate(90deg)';
+            button.setAttribute('aria-expanded', 'true');
+        }
+    }
+    </script>
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const responsiveNav = document.getElementById("responsive-nav");
+
+    menuToggle.addEventListener("click", () => {
+        responsiveNav.classList.toggle("hidden");
+    });
     </script>
 </body>
 

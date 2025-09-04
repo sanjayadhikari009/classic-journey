@@ -145,13 +145,13 @@
 }
 
 .btn-outline {
-    @apply border border-[#0074e0] text-[#0074e0]  px-6 py-3 uppercase font-medium hover:bg-[#0074e0] hover:text-white transition-colors duration-200;
+    @apply border border-[#0074e0] text-[#0074e0] text-center   px-6 py-3 uppercase font-medium hover:bg-[#0074e0] hover:text-white transition-colors duration-200;
 }
 .btn-outline-primary {
     @apply text-sm border border-green-600 text-green-600 px-6 py-3  font-medium hover:bg-green-600 hover:text-white transition-colors duration-200;
 }
 .btn-outline-white {
-    @apply inline-flex uppercase  whitespace-nowrap border text-sm border-white text-white px-6 py-2  font-medium  hover:bg-white hover:text-black  transition-colors duration-200;
+    @apply inline-flex uppercase  text-center whitespace-nowrap border text-sm border-white text-white px-6 py-2  font-medium  hover:bg-white hover:text-black  transition-colors duration-200;
 }
 .slider-custom {
     @apply max-w-[330px] h-[480px];

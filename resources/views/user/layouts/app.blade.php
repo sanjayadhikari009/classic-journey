@@ -7,26 +7,26 @@ $user = auth()->user();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insight Vacations - User Panel</title>
+    <title>Classic Journeys - User Panel</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="bg-gray-100">
     <!-- Header with Sidebar Toggle Button -->
-    <header class="w-full z-50 top-0 relative bg-purple-700 text-white flex items-center justify-between px-4 py-3">
+    <header class="w-full z-50 top-0 relative classic-journeys-header text-white flex items-center justify-between px-4 py-3">
         <button id="sidebarToggleBtn" class="text-white text-2xl mr-4 focus:outline-none md:hidden">
             <i class="fas fa-bars"></i>
         </button>
         <span class="flex items-center gap-2">
-            <img src="/images/travel_stride.svg" alt="TravelStride Logo" class="h-8 w-auto">
-            <span class="font-bold text-lg tracking-wide">TravelStride</span>
+            <img src="/images/travel_stride.svg" alt="Classic Journeys Logo" class="h-8 w-auto">
+            <span class="font-bold text-lg tracking-wide">Classic Journeys</span>
         </span>
         <div class="flex items-center gap-4">
-            <a href="{{ route('user.dashboard') }}" class="text-white hover:text-yellow-300 font-medium">Dashboard</a>
-            <a href="{{ route('user.team') }}" class="text-white hover:text-yellow-300 font-medium">Team</a>
-            <a href="{{ route('user.terms') }}" class="text-white hover:text-yellow-300 font-medium">T&amp;C</a>
-            <a href="{{ route('user.faq') }}" class="text-white hover:text-yellow-300 font-medium">FAQs</a>
-            <a href="{{ route('user.about') }}" class="text-white hover:text-yellow-300 font-medium">About Us</a>
+            <a href="{{ route('user.dashboard') }}" class="text-white hover:text-blue-300 font-medium">Dashboard</a>
+            <a href="{{ route('user.team') }}" class="text-white hover:text-blue-300 font-medium">Team</a>
+            <a href="{{ route('user.terms') }}" class="text-white hover:text-blue-300 font-medium">T&amp;C</a>
+            <a href="{{ route('user.faq') }}" class="text-white hover:text-blue-300 font-medium">FAQs</a>
+            <a href="{{ route('user.about') }}" class="text-white hover:text-blue-300 font-medium">About Us</a>
         </div>
     </header>
     <div class="flex min-h-screen pt-16">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Sign In - Travelstride</title>
+    <title>Sign In - Classic Journeys</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -17,7 +17,7 @@
             <!-- Logo and Header -->
             <div class="text-center">
                 <div class="flex justify-center">
-                    <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center">
+                    <div class="w-16 h-16 bg-[#1e3a8a] rounded-xl flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
@@ -61,7 +61,7 @@
                             Username or Email
                         </label>
                         <input id="login" name="login" type="text" required 
-                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a8a] focus:border-transparent transition"
                                placeholder="Enter your username or email"
                                value="{{ old('login') }}">
                     </div>
@@ -71,21 +71,21 @@
                             Password
                         </label>
                         <input id="password" name="password" type="password" required 
-                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a8a] focus:border-transparent transition"
                                placeholder="Enter your password">
                     </div>
 
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
                             <input id="remember" name="remember" type="checkbox" 
-                                   class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                                   class="h-4 w-4 text-[#1e3a8a] focus:ring-[#1e3a8a] border-gray-300 rounded">
                             <label for="remember" class="ml-2 block text-sm text-gray-700">
                                 Remember me
                             </label>
                         </div>
                        
                         <div class="text-sm">
-                            <a href="{{ route('password.request') }}" class="font-medium text-green-600 hover:text-green-500">
+                            <a href="{{ route('password.request') }}" class="font-medium text-[#1e3a8a] hover:text-[#1e40af]">
                                 Forgot your password?
                             </a>
                         </div>
@@ -93,7 +93,7 @@
 
                     <div>
                         <button type="submit" 
-                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition">
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-[#1e3a8a] hover:bg-[#1e40af] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e3a8a] transition">
                             Sign In
                         </button>
                     </div>
@@ -135,7 +135,7 @@
                 <div class="mt-6 text-center">
                     <p class="text-sm text-gray-600">
                         Don't have an account? 
-                        <a href="{{ route('register') }}" class="font-medium text-green-600 hover:text-green-500">
+                        <a href="{{ route('register') }}" class="font-medium text-[#1e3a8a] hover:text-[#1e40af]">
                             Sign up for free
                         </a>
                     </p>
@@ -146,9 +146,9 @@
             <div class="text-center">
                 <p class="text-xs text-gray-500">
                     By signing in, you agree to our 
-                    <a href="#" class="text-green-600 hover:text-green-500">Terms of Service</a> 
+                    <a href="#" class="text-[#1e3a8a] hover:text-[#1e40af]">Terms of Service</a> 
                     and 
-                    <a href="#" class="text-green-600 hover:text-green-500">Privacy Policy</a>
+                    <a href="#" class="text-[#1e3a8a] hover:text-[#1e40af]">Privacy Policy</a>
                 </p>
             </div>
         </div>

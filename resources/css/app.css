@@ -48,11 +48,11 @@
         "Noto Color Emoji";
     --font-mencken: "Mencken";
     --font-terminatest: "Terminatest";
-    /* Travelstride Brand Colors */
-    --color-primary: #0074e0; /* Green-600 */
-    --color-primary-dark: #047857; /* Green-700 */
-    --color-primary-light: #10b981; /* Green-500 */
-    --color-primary-lighter: #d1fae5; /* Green-100 */
+    /* Classic Journeys Brand Colors */
+    --color-primary: #1e3a8a; /* Dark Blue - Classic Journeys primary */
+    --color-primary-dark: #1e40af; /* Darker Blue */
+    --color-primary-light: #3b82f6; /* Lighter Blue */
+    --color-primary-lighter: #dbeafe; /* Light Blue background */
 
     /* Secondary Colors */
     --color-secondary: #1e40af; /* Blue-700 */
@@ -99,11 +99,11 @@
 
 /* Custom CSS Variables for easy access */
 :root {
-    /* Brand Colors */
-    --travelstride-green: #059669;
-    --travelstride-green-dark: #047857;
-    --travelstride-green-light: #10b981;
-    --travelstride-green-lighter: #d1fae5;
+    /* Classic Journeys Brand Colors */
+    --classic-journeys-blue: #1e3a8a;
+    --classic-journeys-blue-dark: #1e40af;
+    --classic-journeys-blue-light: #3b82f6;
+    --classic-journeys-blue-lighter: #dbeafe;
 
     /* Blue Colors */
     --travelstride-blue: #1e40af;
@@ -137,7 +137,7 @@
 }
 /* Custom Component Styles */
 .btn-primary {
-    @apply bg-[#0074e0] border-[#0074e0] px-4 py-2 text-white text-center font-bold text-sm hover:bg-[#0b4984] uppercase;
+    @apply bg-[#1e3a8a] border-[#1e3a8a] px-4 py-2 text-white text-center font-bold text-sm hover:bg-[#1e40af] uppercase;
 }
 
 .btn-secondary {
@@ -145,7 +145,7 @@
 }
 
 .btn-outline {
-    @apply border border-[#0074e0] text-[#0074e0] text-center   px-6 py-3 uppercase font-medium hover:bg-[#0074e0] hover:text-white transition-colors duration-200;
+    @apply border border-[#1e3a8a] text-[#1e3a8a] text-center   px-6 py-3 uppercase font-medium hover:bg-[#1e3a8a] hover:text-white transition-colors duration-200;
 }
 .btn-outline-primary {
     @apply text-sm border border-green-600 text-green-600 px-6 py-3  font-medium hover:bg-green-600 hover:text-white transition-colors duration-200;
@@ -329,4 +329,35 @@
 }
 .section-subheading {
     @apply text-center text-[12px] font-medium uppercase mb-2;
+}
+
+/* Classic Journeys Specific Styles */
+.classic-journeys-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.classic-journeys-sidebar {
+    background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.classic-journeys-card {
+    @apply bg-white rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300;
+}
+
+.classic-journeys-button {
+    @apply bg-[#1e3a8a] hover:bg-[#1e40af] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.classic-journeys-button-outline {
+    @apply border-2 border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+.classic-journeys-nav-link {
+    @apply text-gray-700 hover:text-[#1e3a8a] font-medium transition-colors duration-200;
+}
+
+.classic-journeys-nav-link-active {
+    @apply text-[#1e3a8a] font-semibold;
 }

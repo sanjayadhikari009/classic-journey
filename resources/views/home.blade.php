@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Travelstride - The new way to explore the world's wonders")
+@section('title', "Classic Journeys - The world's finest walking tours")
 
 @section('content')
 <!-- poster="/videos/heroimage.jpg" -->

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - @yield('title', 'Dashboard')</title>
+    <title>Classic Journeys Admin - @yield('title', 'Dashboard')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -13,16 +13,16 @@
 
     <style>
     .sidebar-gradient {
-        background: linear-gradient(180deg, #312e81 0%, #3730a3 100%);
+        background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
     }
 
     .sidebar-shadow {
-        box-shadow: 0 4px 24px 0 rgba(49, 46, 129, 0.12);
+        box-shadow: 0 4px 24px 0 rgba(30, 58, 138, 0.12);
     }
 
     .sidebar-avatar {
-        background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
-        box-shadow: 0 2px 8px 0 rgba(49, 46, 129, 0.10);
+        background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+        box-shadow: 0 2px 8px 0 rgba(30, 58, 138, 0.10);
     }
 
     .sidebar-link {
@@ -31,9 +31,9 @@
 
     .sidebar-link.active,
     .sidebar-link:hover {
-        background: #4338ca !important;
+        background: #1e40af !important;
         color: #fff !important;
-        box-shadow: 0 2px 8px 0 rgba(67, 56, 202, 0.10);
+        box-shadow: 0 2px 8px 0 rgba(30, 64, 175, 0.10);
     }
 
     .sidebar-link svg {
@@ -47,7 +47,7 @@
 
     .sidebar-section-title {
         font-size: 0.85rem;
-        color: #a5b4fc;
+        color: #93c5fd;
         letter-spacing: 0.05em;
         margin: 1.5rem 0 0.5rem 1.5rem;
         text-transform: uppercase;
@@ -69,16 +69,16 @@
     <div class="flex gap-6">
         <!-- Sidebar -->
         <div id="admin-side"
-            class="w-[350px] fixed md:relative top-0 left-0  d-md-block bg-dark z-50  py-4 min-vh-100 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+            class="w-[350px] fixed md:relative top-0 left-0  d-md-block sidebar-gradient z-50  py-4 min-vh-100 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
             <button id="close-side-button" class="absolute top-2 right-2 z-20 text-white md:hidden">
                 <i class="fas fa-times"></i>
             </button>
             <div>
                 <div class="d-flex flex-column align-items-center mb-4">
-                    <img src="/images/travel_stride.svg" alt="TravelStride Logo" class="mb-2" width="64" height="64">
-                    <span class="text-white fw-bold">TravelStride</span>
+                    <img src="/images/travel_stride.svg" alt="Classic Journeys Logo" class="mb-2" width="64" height="64">
+                    <span class="text-white fw-bold">Classic Journeys</span>
                 </div>
-                <h4 class="text-white px-3 mb-4">Travel<span class="text-success">Stride</span></h4>
+                <h4 class="text-white px-3 mb-4">Classic <span class="text-info">Journeys</span></h4>
                 <ul class="nav flex-column mb-4">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ route('admin.products.index') }}">

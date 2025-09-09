@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('location')->nullable()->after('bio');
             $table->date('date_of_birth')->nullable()->after('location');
             $table->enum('gender', ['male', 'female', 'other'])->nullable()->after('date_of_birth');
-            $table->boolean('is_admin')->default(false)->after('gender');
+            // $table->booleasn('is_admin')->default(false)->after('gender');
         });
     }
 
@@ -29,7 +29,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn([
-                'avatar', 'bio', 'location', 'date_of_birth', 'gender', 'is_admin'
+                'avatar', 'bio', 'location', 'date_of_birth', 'gender'
             ]);
         });
     }

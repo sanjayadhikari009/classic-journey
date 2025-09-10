@@ -7,7 +7,7 @@
 <section class="bg-gray-50 py-16">
     <div class="max-w-7xl px-2 sm:px-6 md:px-8 mx-auto ">
         <div class="text-center">
-            <h1 class="text-4xl font-bold text-travelstride-gray-900 mb-4">About Travelstride</h1>
+            <h1 class="text-4xl font-bold text-travelstride-gray-900 mb-4">About Classic Journey</h1>
             <p class="text-xl text-travelstride-gray-600 mb-8">The new way to explore the world's wonders</p>
         </div>
     </div>
@@ -19,7 +19,7 @@
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-travelstride-gray-900 mb-6">Our Mission</h2>
             <p class="text-lg text-travelstride-gray-600 leading-relaxed">
-                Travelstride helps you search and compare 50,000+ expert-planned trips from 1,000+ companies.
+                Classic Journey helps you search and compare 50,000+ expert-planned trips from 1,000+ companies.
                 Get the real picture with both traveler and expert reviews to ensure the trip you book is the right one
                 for you.
             </p>
@@ -136,7 +136,7 @@
 <!-- Featured Companies Section -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl px-2 sm:px-6 md:px-8 mx-auto ">
-        <h2 class="text-3xl font-bold text-center text-travelstride-gray-900 mb-12">Tours & Operators on Travelstride
+        <h2 class="text-3xl font-bold text-center text-travelstride-gray-900 mb-12">Tours & Operators on Classic Journey
         </h2>
         <p class="text-center text-travelstride-gray-600 mb-8">Awarded and Featured by:</p>
 
@@ -186,7 +186,7 @@
 <section class="py-16 bg-travelstride-blue">
     <div class="max-w-7xl px-2 sm:px-6 md:px-8 mx-auto text-center">
         <h2 class="text-3xl font-bold text-white mb-4">Ready to start your journey?</h2>
-        <p class="text-xl text-travelstride-blue-lighter mb-8">Join thousands of travelers who trust Travelstride for
+        <p class="text-xl text-travelstride-blue-lighter mb-8">Join thousands of travelers who trust Classic Journey for
             their adventures</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="{{ route('trips.index') }}" class="btn-secondary">

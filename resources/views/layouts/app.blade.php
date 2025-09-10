@@ -59,7 +59,13 @@
                 <nav class="mx-auto  relative  bg-transparent  border-b border-b-white shadow-xl z-50">
 
 
-                    <div class="container flex  items-center ">
+                    <div class="container flex  items-center justify-between md:justify-start">
+                        <div class="mr-6">
+                            <button class="menu-toggle text-white hover:text-primary cursor-pointer"
+                                id="user-side-button">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
                         <!-- Logo -->
                         <div class=" flex justify-center space-x-2   ">
                             <a href="/" class=" flex items-center w-[250px] pr-8 ">
@@ -348,10 +354,10 @@
                         </div>
 
                         <!-- Right side -->
-                        <div id="nav-container" class="flex flex-col flex-1 md:border-l  md:border-l-white">
+                        <div id="nav-container" class="hidden md:flex flex-col flex-1 md:border-l  md:border-l-white">
                             <div id="nav-border"
                                 class="relative before:absolute  before:bottom-0 before:border-b before:border-b-white before:w-[calc(100vw-(100vw-1320px)/2-300px)]">
-                                <div class=" hidden md:flex items-center justify-between pl-8 py-2  ">
+                                <div class=" flex items-center justify-between pl-8 py-2  ">
                                     <div><a href="/" class="nav-text text-white font-medium  text-xs"><i
                                                 class="fa-solid fa-phone"></i>
                                             800-200-3887</a>
@@ -399,12 +405,7 @@
                                 </ul>
                                 <a id="sign-in-btn" href="{{ route('login') }}" class="btn-primary hidden md:flex">Find
                                     Tour</a>
-                                <div>
-                                    <button class="menu-toggle text-white hover:text-primary cursor-pointer"
-                                        id="user-side-button">
-                                        <i class="fas fa-bars"></i>
-                                    </button>
-                                </div>
+
 
                             </div>
 

@@ -5,7 +5,7 @@
 @section('content')
 <!-- poster="/videos/heroimage.jpg" -->
 <!-- Hero Section with single background video and overlay -->
-<section class="relative h-[100vh] flex items-center justify-center overflow-hidden">
+<section class="relative h-[50vh] md:h-[100vh] flex items-center justify-center overflow-hidden">
     <video autoplay loop muted playsinline class="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-full object-cover z-0 transition-all
         duration-700">
         <source src="/videos/vid-vid.mp4" type="video/mp4">
@@ -14,10 +14,10 @@
     <div class="absolute inset-0 bg-black/50 z-10"></div>
 
     <div
-        class="relative z-20 max-w-7xl px-2 sm:px-6 md:px-8 py-20 mx-auto flex flex-col items-center justify-end h-full">
+        class="relative z-20 md:max-w-7xl px-2 sm:px-6 md:px-8 py-20 mx-auto flex flex-col items-center justify-end h-full">
 
         <h1 class="text-3xl md:text-5xl  uppercase text-white text-center mb-2 drop-shadow-lg">Classic
-            Journeys<span class="block  text-2xl">walk into
+            Journeys<span class="block text-lg  md:text-2xl">walk into
                 extraordinary</span></h1> <button class="btn-primary mt-4">Find a
             tour</button>
 
@@ -27,7 +27,7 @@
 <!-- How we do section -->
 <section class="py-[70px]">
     <div class="container flex justify-center">
-        <div class="w-2/3 flex flex-col items-center">
+        <div class="md:w-2/3 flex flex-col items-center">
             <h2 class="text-center text-2xl md:text-[34px] lg:text-[44px] font-mencken">We create the most culturally
                 rich</br>
                 & authentic walking tours in the world.</h2>
@@ -38,10 +38,12 @@
 
 <section class="py-8 bg-primary">
     <div class="container flex justify-center">
-        <div class="w-2/3 flex flex-col items-center justify-center gap-4 ">
+        <div class="md:w-2/3 flex flex-col items-center justify-center gap-4 ">
             <h3 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl text-white">Travel + </br> Leisure</h3>
-            <h3 class="font-bold uppercase text-3xl lg:text-4xl text-white text-center">World Best tour operator</h3>
-            <h3 class="font-bold uppercase lg:text-xl text-white text-center">Multi-Time No. 1 & Hall of Fame</h3>
+            <h3 class="font-bold uppercase text-2xl md:text-3xl lg:text-4xl text-white text-center">World Best tour
+                operator</h3>
+            <h3 class="font-bold uppercase text-xs md:text-xl text-white text-center">Multi-Time No. 1 & Hall of Fame
+            </h3>
 
         </div>
     </div>
@@ -236,7 +238,7 @@
                     </h3>
                 </div>
             </div>
-            <div class="pl-8">
+            <div class="md:pl-8">
                 <div class="py-8 border-t">
                     <a href="">
                         <p class="text-sm font-sans">

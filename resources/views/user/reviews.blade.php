@@ -36,7 +36,7 @@
             <div class="text-gray-500 text-sm">Total Views</div>
         </div>
         <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <div class="bg-pink-100 text-pink-500 rounded-full p-3 mb-2">
+            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mb-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.764 7.528A2 2 0 0115 22H9a2 2 0 01-1.789-1.578l-3.764-7.528A2 2 0 014.236 10H9m5 0V6a3 3 0 00-6 0v4m6 0H9"/></svg>
             </div>
             <div class="text-2xl font-bold text-gray-900">{{ $helpfulVotes ?? 0 }}</div>
@@ -52,7 +52,7 @@
             </div>
             <div class="text-xl font-semibold text-gray-700 mb-2">No reviews yet</div>
             <div class="text-gray-500 mb-6">Share your travel experiences and help other travelers make informed decisions!</div>
-                            <a href="{{ route('user.customer.write_review') }}" class="inline-block px-8 py-3 bg-pink-500 text-white font-bold rounded-lg shadow hover:bg-pink-600 transition">Write Your First Review</a>
+                            <a href="{{ route('user.customer.write_review') }}" class="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition">Write Your First Review</a>
         </div>
     @else
         <!-- Reviews List (if any) -->
@@ -150,7 +150,7 @@
                 <h3 class="text-lg font-medium text-gray-900 mb-2">No reviews yet</h3>
                 <p class="text-gray-600 mb-6">Share your travel experiences and help other travelers make informed
                     decisions!</p>
-                <a href="{{ route('user.customer.write_review') }}" class="inline-block px-8 py-3 bg-pink-500 text-white font-bold rounded-lg shadow hover:bg-pink-600 transition">Write Your First Review</a>
+                <a href="{{ route('user.customer.write_review') }}" class="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition">Write Your First Review</a>
             </div>
             @endif
         </div>

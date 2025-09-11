@@ -20,7 +20,7 @@
  x-effect="document.body.classList.toggle('overflow-hidden', addMemberOpen || balanceModalOpen || bankModalOpen || orderModalOpen)">
     <div class="flex items-center justify-between mb-6">
         <h1 class="text-2xl font-bold">Members List</h1>
-        <button @click="addMemberOpen = true" class="btn btn-secondary px-4 py-2 rounded bg-indigo-600 text-white hover:bg-indigo-700 transition">Add Member</button>
+        <button @click="addMemberOpen = true" class="btn btn-secondary px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">Add Member</button>
     </div>
     @if(session('success'))
         <div class="mb-6 p-4 bg-green-100 text-green-800 rounded shadow text-center font-semibold">
@@ -42,27 +42,27 @@
                 <div class="flex-1 space-y-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-medium mb-1">User Name<span class="text-red-500">*</span></label>
-                        <input name="username" type="text" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter user name" value="{{ old('username') }}" required>
+                        <input name="username" type="text" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-indigo-500" placeholder="Enter user name" value="{{ old('username') }}" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-1">Email<span class="text-red-500">*</span></label>
-                        <input name="email" type="email" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter email" value="{{ old('email') }}" required>
+                        <input name="email" type="email" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-indigo-500" placeholder="Enter email" value="{{ old('email') }}" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-1">Phone Number<span class="text-red-500">*</span></label>
-                        <input name="mobile_number" type="text" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter phone number" value="{{ old('mobile_number') }}" required>
+                        <input name="mobile_number" type="text" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-indigo-500" placeholder="Enter phone number" value="{{ old('mobile_number') }}" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-1">Login Password<span class="text-red-500">*</span></label>
-                        <input name="password" type="password" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter login password" required>
+                        <input name="password" type="password" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-indigo-500" placeholder="Enter login password" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-1">Transaction Password</label>
-                        <input name="transaction_password" type="password" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter transaction password">
+                        <input name="transaction_password" type="password" class="form-input w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-indigo-500" placeholder="Enter transaction password">
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-1">Select Referral</label>
-                        <select name="referral_by" class="form-select w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        <select name="referral_by" class="form-select w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-indigo-500">
                             <option value="">Select User</option>
                             @foreach($referrals as $ref)
                                 <option value="{{ $ref->id }}" @if(old('referral_by') == $ref->id) selected @endif>{{ $ref->referral_code }} - {{ $ref->username }}</option>
@@ -71,7 +71,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-1">Level<span class="text-red-500">*</span></label>
-                        <select name="level" id="level-select-modal" class="form-select w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                        <select name="level" id="level-select-modal" class="form-select w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-indigo-500" required>
                             <option value="">Select Level</option>
                             @foreach($levels as $level)
                                 <option value="{{ $level->level }}" data-normal_commission="{{ $level->normal_commission }}" data-stop_commission="{{ $level->stop_commission }}" data-journey="{{ $level->number_of_journey }}" data-signup_bonus="{{ $level->signup_bonus }}" @if(old('level', 1) == $level->level) selected @endif>
@@ -85,7 +85,7 @@
                     <!-- Dynamic level info will be shown here -->
                 </div>
                 <div class="flex justify-end gap-3 pt-4 sticky bottom-0 bg-white z-10">
-                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">Submit</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500 transition">Submit</button>
                     <button type="button" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-gray-400 transition" @click="addMemberOpen = false">Cancel</button>
                 </div>
             </form>
@@ -115,7 +115,7 @@
                     <input name="amount" type="number" step="0.01" min="0.01" class="form-input w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Amount" required>
                 </div>
                 <div class="flex justify-end gap-3">
-                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">Submit</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500 transition">Submit</button>
                     <button type="button" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-gray-400 transition" @click="balanceModalOpen = false">Cancel</button>
                 </div>
             </form>
@@ -141,7 +141,7 @@
                     <input name="address" type="text" class="form-input w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Address" required>
                 </div>
                 <div class="flex justify-end gap-3">
-                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">Save Bank</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500 transition">Save Bank</button>
                     <button type="button" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-gray-400 transition" @click="bankModalOpen = false">Cancel Edit</button>
                 </div>
             </form>
@@ -171,7 +171,7 @@
                 </div>
                 <!-- Optionally, show current order settings here -->
                 <div class="flex justify-end gap-3">
-                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">Lock Journey</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500 transition">Lock Journey</button>
                     <button type="button" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold px-6 py-2 rounded shadow focus:outline-none focus:ring-2 focus:ring-gray-400 transition" @click="orderModalOpen = false">Cancel</button>
                 </div>
             </form>

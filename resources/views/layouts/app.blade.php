@@ -358,9 +358,10 @@
                             <div id="nav-border"
                                 class="relative before:absolute  before:bottom-0 before:border-b before:border-b-white before:w-[calc(100vw-(100vw-1320px)/2-300px)]">
                                 <div class=" flex items-center justify-between pl-8 py-2  ">
-                                    <div><a href="/" class="nav-text text-white font-medium  text-xs"><i
-                                                class="fa-solid fa-phone"></i>
-                                            800-200-3887</a>
+                                    <div><span class="nav-text text-white font-medium text-xs">
+                                                <i class="fa-solid fa-globe"></i>
+                                                Premium Travel Experiences
+                                            </span>
                                     </div>
                                     <div>
                                         <ul class="flex items-center gap-6">
@@ -403,8 +404,21 @@
                                             and
                                             inspiration <i class="fa-solid fa-chevron-down"></i></button></li>
                                 </ul>
-                                <a id="sign-in-btn" href="{{ route('login') }}" class="btn-primary hidden md:flex">Find
-                                    Tour</a>
+                                @auth
+                                    <!-- User info and logout button when logged in -->
+                                    <div class="flex items-center space-x-4 hidden md:flex">
+                                        <span class="user-name text-white font-medium">{{ auth()->user()->name }}</span>
+                                        <form method="POST" action="{{ route('logout') }}" class="inline">
+                                            @csrf
+                                            <button type="submit" class="btn-primary">
+                                                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                                            </button>
+                                        </form>
+                                    </div>
+                                @else
+                                    <!-- Find Tour button when not logged in -->
+                                    <a id="sign-in-btn" href="{{ route('login') }}" class="btn-primary hidden md:flex">Login</a>
+                                @endauth
 
 
                             </div>
@@ -738,47 +752,47 @@
                     <div class=" flex-1 py-6 overflow-y-auto">
                         @auth
                         <!-- <a href="{{ route('user.dashboard') }}"
-                    class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                    class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                         class="fas fa-tachometer-alt text-primary"></i> <span
                         class="ml-3 hidden md:inline group-hover:inline">Dashboard</span></a> -->
                         <a href="{{ route('user.rate_trip') }}"
-                            class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                            class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                                 class="fas fa-credit-card text-primary"></i> <span
                                 class="ml-3 inline group-hover:inline">Rate a Trip</span></a>
 
                         <a href="{{ route('user.team') }}"
-                            class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                            class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                                 class="fas fa-users text-primary"></i> <span
                                 class="ml-3 inline group-hover:inline">Team</span></a>
 
                         <!-- <a href="{{ route('user.customer.customer_recharge') }}"
-                    class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                    class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                         class="fas fa-credit-card text-primary"></i> <span
                         class="ml-3 inline group-hover:inline">Recharge</span></a> -->
 
                         <a href="{{ route('user.customer.history') }}"
-                            class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                            class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                                 class="fas fa-history text-primary"></i> <span
                                 class="ml-3 inline group-hover:inline">History</span></a>
                         <!-- <a href="{{ route('user.customer.withdrawl') }}"
-                    class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                    class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                         class="fas fa-wallet text-primary"></i> <span
                         class="ml-3 inline group-hover:inline">Withdrawal</span></a> -->
                         <a href="{{ route('user.password.change') }}"
-                            class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                            class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                                 class="fas fa-key text-primary"></i> <span class="ml-3 inline group-hover:inline">Change
                                 Password</span></a>
                         @endauth
                         <a href="{{ route('user.terms') }}"
-                            class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                            class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                                 class="fas fa-file-alt text-primary"></i> <span
                                 class="ml-3 inline group-hover:inline">T&amp;C</span></a>
                         <a href="{{ route('user.faq') }}"
-                            class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                            class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                                 class="fas fa-question-circle text-primary"></i> <span
                                 class="ml-3 inline group-hover:inline">FAQs</span></a>
                         <a href="{{ route('user.about') }}"
-                            class="flex items-center px-6 py-3 rounded-lg hover:bg-purple-50 font-medium"><i
+                            class="flex items-center px-6 py-3 rounded-lg hover:bg-blue-50 font-medium"><i
                                 class="fas fa-info-circle text-primary"></i> <span
                                 class="ml-3 inline group-hover:inline">About Us</span></a>
                         <div role="navigation" aria-label="Mobile navigation" class="flex md:hidden w-full">
@@ -1755,6 +1769,7 @@
         const navBorder = document.getElementById("nav-border");
         const sidebtn = document.getElementById("user-side-button");
         const lgnusesr = document.getElementById("user-menu-button");
+        const userName = document.querySelector(".user-name");
 
         let lastScrollTop = 0;
         let isDropdownOpen = false; // Track dropdown state
@@ -1785,6 +1800,10 @@
                     el.classList.add("text-black");
                 });
             }
+            if (userName) {
+                userName.classList.remove("text-white");
+                userName.classList.add("text-black");
+            }
         }
 
         // Function to apply scroll-up/top styles
@@ -1812,6 +1831,10 @@
                     el.classList.remove("text-black");
                     el.classList.add("text-white");
                 });
+            }
+            if (userName) {
+                userName.classList.remove("text-black");
+                userName.classList.add("text-white");
             }
         }
 

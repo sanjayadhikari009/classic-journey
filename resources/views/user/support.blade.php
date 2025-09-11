@@ -21,29 +21,29 @@
             </div>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">FAQ</h3>
             <p class="text-sm text-gray-600 mb-4">Find answers to common questions</p>
-            <a href="#faq" class="text-green-600 hover:text-green-700 font-medium">Browse FAQ →</a>
+            <a href="#faq" class="text-blue-600 hover:text-green-700 font-medium">Browse FAQ →</a>
         </div>
 
         <div class="bg-white rounded-lg shadow-md p-6 text-center">
-            <div class="p-3 rounded-full bg-green-100 text-green-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
+            <div class="p-3 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
             </div>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
             <p class="text-sm text-gray-600 mb-4">Send us a detailed message</p>
-            <a href="#contact" class="text-green-600 hover:text-green-700 font-medium">Contact Us →</a>
+            <a href="#contact" class="text-blue-600 hover:text-green-700 font-medium">Contact Us →</a>
         </div>
 
         <div class="bg-white rounded-lg shadow-md p-6 text-center">
-            <div class="p-3 rounded-full bg-purple-100 text-purple-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
+            <div class="p-3 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
             </div>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Live Chat</h3>
             <p class="text-sm text-gray-600 mb-4">Chat with our support team</p>
-            <button class="text-green-600 hover:text-green-700 font-medium">Start Chat →</button>
+            <button class="text-blue-600 hover:text-green-700 font-medium">Start Chat →</button>
         </div>
     </div>
 
@@ -88,7 +88,7 @@
             </div>
             
             <div class="flex justify-end">
-                <button type="submit" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                     Send Message
                 </button>
             </div>
@@ -175,22 +175,22 @@
                 </div>
                 <h3 class="font-medium text-gray-900 mb-2">Phone Support</h3>
                 <p class="text-sm text-gray-600 mb-2">Available 24/7</p>
-                <p class="text-green-600 font-medium">+1 (555) 123-4567</p>
+                <p class="text-blue-600 font-medium">+1 (555) 123-4567</p>
             </div>
 
             <div class="text-center">
-                <div class="p-3 rounded-full bg-green-100 text-green-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
+                <div class="p-3 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
                 </div>
                 <h3 class="font-medium text-gray-900 mb-2">Email Support</h3>
                 <p class="text-sm text-gray-600 mb-2">Response within 24 hours</p>
-                <p class="text-green-600 font-medium">support@travelstride.com</p>
+                <p class="text-blue-600 font-medium">support@travelstride.com</p>
             </div>
 
             <div class="text-center">
-                <div class="p-3 rounded-full bg-purple-100 text-purple-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
+                <div class="p-3 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4 w-12 h-12 flex items-center justify-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -198,7 +198,7 @@
                 </div>
                 <h3 class="font-medium text-gray-900 mb-2">Office Address</h3>
                 <p class="text-sm text-gray-600 mb-2">Visit us in person</p>
-                <p class="text-green-600 font-medium">123 Travel St, City, State 12345</p>
+                <p class="text-blue-600 font-medium">123 Travel St, City, State 12345</p>
             </div>
         </div>
     </div>

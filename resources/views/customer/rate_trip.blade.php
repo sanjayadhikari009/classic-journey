@@ -119,7 +119,7 @@
                                 {{ number_format($lockedProduct->price, 2) }}</span>
                         </div>
                         <a href="{{ route('user.customer.start_locked_product', $lockedProduct->id) }}"
-                            class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded text-sm font-semibold transition-colors">
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-semibold transition-colors">
                             Start Locked Journey
                         </a>
                     </li>
@@ -152,12 +152,12 @@
             </button>
             @elseif(isset($currentJourney) && $currentJourney && !$hasPendingSubmissions && !$hasNegativeBalance)
             <a href="{{ route('user.customer.write_review') }}"
-                class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200">
+                class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200">
                 Start Journey
             </a>
             @else
             <button onclick="showJourneyStatusToast()"
-                class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200">
+                class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200">
                 Start Journey
             </button>
             @endif

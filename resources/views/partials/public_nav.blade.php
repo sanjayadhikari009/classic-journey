@@ -1,15 +1,15 @@
 <nav class="w-full bg-white shadow py-4 px-8 flex items-center justify-between z-50 relative">
-    <a href="/" class="font-bold text-xl text-purple-700">INSIGHT VACATIONS</a>
+    <a href="/" class="font-bold text-xl text-blue-700">INSIGHT VACATIONS</a>
     <div class="flex gap-6">
-        <a href="/" class="text-gray-700 hover:text-purple-700">Home</a>
-        <a href="{{ route('destinations.index') }}" class="text-gray-700 hover:text-purple-700">Destinations</a>
-        <a href="{{ route('trips.index') }}" class="text-gray-700 hover:text-purple-700">Trip Themes & Styles</a>
-        <a href="#" class="text-gray-700 hover:text-purple-700">Tour Company Reviews</a>
-        <a href="#" class="text-gray-700 hover:text-purple-700">Fun & Helpful</a>
-        <a href="{{ route('contact') }}" class="text-gray-700 hover:text-purple-700">Contact Us</a>
+        <a href="/" class="text-gray-700 hover:text-blue-700">Home</a>
+        <a href="{{ route('destinations.index') }}" class="text-gray-700 hover:text-blue-700">Destinations</a>
+        <a href="{{ route('trips.index') }}" class="text-gray-700 hover:text-blue-700">Trip Themes & Styles</a>
+        <a href="#" class="text-gray-700 hover:text-blue-700">Tour Company Reviews</a>
+        <a href="#" class="text-gray-700 hover:text-blue-700">Fun & Helpful</a>
+        <a href="{{ route('contact') }}" class="text-gray-700 hover:text-blue-700">Contact Us</a>
         @guest
-        <a href="{{ route('login') }}" class="text-purple-700 font-semibold border border-purple-700 px-4 py-1 rounded hover:bg-purple-50">Sign In</a>
-        <a href="{{ route('register') }}" class="text-white bg-purple-700 px-4 py-1 rounded hover:bg-purple-800">Register</a>
+        <a href="{{ route('login') }}" class="text-blue-700 font-semibold border border-blue-700 px-4 py-1 rounded hover:bg-blue-50">Sign In</a>
+        <a href="{{ route('register') }}" class="text-white bg-blue-700 px-4 py-1 rounded hover:bg-blue-800">Register</a>
         @endguest
         @auth
             <div class="relative inline-block text-left ml-4">

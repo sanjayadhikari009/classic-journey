@@ -26,9 +26,9 @@
                 </div>
             </div>
             <div class="flex gap-4 mt-6 md:mt-0">
-                <button class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-purple-100 transition">$10</button>
-                <button class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-purple-100 transition">$50</button>
-                <button class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-purple-100 transition">$100</button>
+                <button class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-100 transition">$10</button>
+                <button class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-100 transition">$50</button>
+                <button class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-100 transition">$100</button>
             </div>
         </div>
     </div>
@@ -40,10 +40,10 @@
             @csrf
             <div>
                 <label for="amount" class="block text-sm font-medium text-gray-700 mb-2">Amount (USD)</label>
-                <input type="number" id="amount" name="amount" min="1" step="0.01" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                <input type="number" id="amount" name="amount" min="1" step="0.01" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
             </div>
             <div class="flex justify-end">
-                <button type="submit" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">Recharge</button>
+                <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Recharge</button>
             </div>
         </form>
     </div>

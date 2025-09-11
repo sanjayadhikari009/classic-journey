@@ -150,7 +150,7 @@
                             <input type="hidden" name="rating" id="rating-value" value="5">
                             
                             <button type="submit" id="submit-btn"
-                                class="relative overflow-hidden w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-xl group">
+                                class="relative overflow-hidden w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-xl group">
                                 <span class="relative z-10 flex items-center justify-center">
                                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>

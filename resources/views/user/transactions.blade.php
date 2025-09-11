@@ -12,7 +12,7 @@
             <p class="text-gray-600">View your deposit and withdrawal history</p>
         </div>
         <div class="flex space-x-3">
-            <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                 Deposit
             </button>
             <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
@@ -25,7 +25,7 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div class="bg-white rounded-lg shadow-md p-6">
             <div class="flex items-center">
-                <div class="p-3 rounded-full bg-green-100 text-green-600">
+                <div class="p-3 rounded-full bg-blue-100 text-blue-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                     </svg>
@@ -67,7 +67,7 @@
 
         <div class="bg-white rounded-lg shadow-md p-6">
             <div class="flex items-center">
-                <div class="p-3 rounded-full bg-purple-100 text-purple-600">
+                <div class="p-3 rounded-full bg-blue-100 text-blue-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
                     </svg>
@@ -104,7 +104,7 @@
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
                                     @if($transaction instanceof \App\Models\Deposite)
-                                        <div class="p-2 rounded-full bg-green-100 text-green-600 mr-3">
+                                        <div class="p-2 rounded-full bg-blue-100 text-blue-600 mr-3">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                                             </svg>
@@ -121,13 +121,13 @@
                                 </div>
                             </td>
                             <td class="px-6 py-4">
-                                <div class="text-sm font-medium {{ $transaction instanceof \App\Models\Deposite ? 'text-green-600' : 'text-red-600' }}">
+                                <div class="text-sm font-medium {{ $transaction instanceof \App\Models\Deposite ? 'text-blue-600' : 'text-red-600' }}">
                                     {{ $transaction instanceof \App\Models\Deposite ? '+' : '-' }}${{ number_format($transaction->amount, 2) }}
                                 </div>
                             </td>
                             <td class="px-6 py-4">
                                 <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full 
-                                    {{ $transaction->status === 'completed' ? 'bg-green-100 text-green-800' : 
+                                    {{ $transaction->status === 'completed' ? 'bg-blue-100 text-green-800' : 
                                        ($transaction->status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800') }}">
                                     {{ ucfirst($transaction->status) }}
                                 </span>
@@ -152,7 +152,7 @@
                 </svg>
                 <h3 class="text-lg font-medium text-gray-900 mb-2">No transactions yet</h3>
                 <p class="text-gray-600 mb-6">Start making deposits to fund your travel adventures!</p>
-                <button class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                <button class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                     Make First Deposit
                 </button>
             </div>

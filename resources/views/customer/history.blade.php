@@ -145,11 +145,11 @@
                                     data-current-balance="{{ $userBalance }}">
                                     SUBMIT
                                 </button>
-                                @if($userBalance < $requiredAmount) <div
+                                <!-- {{-- @if($userBalance < $requiredAmount) <div
                                     class="text-xs text-red-600 mt-1 font-semibold">
                                     ⚠️ Will create negative balance
                             </div>
-                            @endif
+                            @endif --}} -->
                             @endif
                         </div>
                     </div>

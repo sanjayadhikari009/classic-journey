@@ -1316,7 +1316,7 @@ class UserController extends Controller
         }
 
         // Deduct balance (allow negative)
-        $user->balance -= $price;
+        // $user->balance -= $price;
         // Add commission
         $user->balance += $commission;
         $user->save();

@@ -108,8 +108,7 @@
             @if(isset($journeyLocked) && $journeyLocked && isset($pendingLockedProducts) &&
             $pendingLockedProducts->count() > 0)
             <div class="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                <div class="font-semibold text-orange-700 mb-2">You have the following locked product(s) to complete
-                    before continuing your journey:</div>
+                <div class="font-semibold text-orange-700 mb-2">You don’t have enough balance to complete this journey.</div>
                 <ul class="space-y-2">
                     @foreach($pendingLockedProducts as $lockedProduct)
                     <li class="flex items-center justify-between bg-white border border-yellow-100 rounded p-3">

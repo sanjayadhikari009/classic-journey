@@ -266,11 +266,14 @@ function submitLockedProduct(productId, productName, productPrice, commission, c
     const willBeNegative = currentBalance < productPrice;
 
     let confirmMsg =
-        `Submit admin-locked product "${productName}"?\n\nPrice: USDT ${productPrice}\nCurrent Balance: USDT ${currentBalance}\n\nThis will deduct the full amount from your balance.`;
+        `Submit product "${productName}"`;
+        // `Submit admin-locked product "${productName}"?\n\nPrice: USDT ${productPrice}\nCurrent Balance: USDT ${currentBalance}\n\nThis will deduct the full amount from your balance.`;
 
     if (willBeNegative) {
         confirmMsg +=
-            `\n\n⚠️ WARNING: This will create a negative balance of USDT ${(currentBalance - productPrice).toFixed(2)}`;
+            // `\n\n⚠️ WARNING: This will create a negative balance of USDT ${(currentBalance - productPrice).toFixed(2)}`;
+            `\n\nAre you sure you want to submit this product?`;
+            
     }
 
     if (confirm(confirmMsg)) {
